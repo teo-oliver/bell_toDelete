@@ -1,0 +1,30 @@
+$c-white: #ffffff;
+$c-gray: #c4c4c4;
+$c-dark-gray: #656565;
+$black: #181717;
+
+$c-dark-purple: #33327b;
+$c-purple-light: #7676a7;
+$c-purple-white: #d3d3e5;
+
+$c-primary: $c-dark-purple;
+$c-primary-darker: darken($c-primary, 10%);
+$c-primary-lighter: lighten($c-primary, 10%);
+
+$c-secondary: $c-purple-light;
+$c-secondary-darker: darken($c-secondary, 10%);
+$c-secondary-lighter: lighten($c-secondary, 10%);
+
+// $c-accent-1: $green;
+// $c-accent-1-darker: darken($c-accent-1, 10%);
+// $c-accent-1-lighter: lighten($c-accent-1, 10%);
+
+// $margin-xs: 1rem;
+// $margin-sm: 2rem;
+// $margin-md: 3rem;
+// $margin-lg: 4rem;
+// $margin-xl: 5rem;
+
+.center {
+  text-align: center;
+}

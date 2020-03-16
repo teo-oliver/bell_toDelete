@@ -1,0 +1,31 @@
+.TextInput {
+  position: relative;
+  margin: 2rem;
+
+  input {
+    border: 1px solid $c-primary;
+    border-radius: 5px;
+    height: 2rem;
+    padding-top: 1rem;
+
+    // &:focus + label,
+    // &:not(:placeholder-shown) + label,
+    // &:active + label {
+    //   outline: 0;
+    //   font-size: 0.6rem;
+    // }
+  }
+
+  label {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .field-active {
+    font-size: 0.6rem;
+    outline: 0;
+  }
+}

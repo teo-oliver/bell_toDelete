@@ -1,0 +1,42 @@
+.RadioOptions {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.RadioOption {
+  label {
+    margin: 1rem;
+    height: 150px;
+    width: 200px;
+    background-color: $c-white;
+    color: $c-primary;
+    border: 2px solid $c-primary;
+    border-radius: 5px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+      margin: 2rem;
+    }
+  }
+
+  input:checked + label {
+    background-color: $c-primary !important;
+    color: white;
+  }
+}

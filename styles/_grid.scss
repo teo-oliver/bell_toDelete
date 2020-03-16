@@ -1,0 +1,74 @@
+/*=======================================
+  Grid
+========================================*/
+
+.grid {
+  display: grid;
+  grid-gap: 30px; //use rems
+  justify-items: center;
+  align-items: center;
+}
+
+@include mobile {
+  @for $i from 1 through 12 {
+    $gap: (($i - 1) / $i) * 30px;
+    .grid-mobile-#{$i} {
+      grid-template-columns: repeat($i, calc((100% / #{$i}) - #{$gap}));
+      @for $n from 1 through $i {
+        > *:nth-child(#{$i} + #{$n}) {
+          -ms-grid-column: $n;
+        }
+      }
+      @for $row from 1 through 50 {
+        @for $n from 1 through $i {
+          $v: (($row - 1) * $i) + $n;
+          > *:nth-child(#{$v}) {
+            -ms-grid-row: $row;
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  @for $i from 1 through 12 {
+    $gap: (($i - 1) / $i) * 30px;
+    .grid-tablet-#{$i} {
+      grid-template-columns: repeat($i, calc((100% / #{$i}) - #{$gap}));
+      @for $n from 1 through $i {
+        > *:nth-child(#{$i} + #{$n}) {
+          -ms-grid-column: $n;
+        }
+      }
+      @for $row from 1 through 50 {
+        @for $n from 1 through $i {
+          $v: (($row - 1) * $i) + $n;
+          > *:nth-child(#{$v}) {
+            -ms-grid-row: $row;
+          }
+        }
+      }
+    }
+  }
+}
+@include desktop {
+  @for $i from 1 through 12 {
+    $gap: (($i - 1) / $i) * 30px;
+    .grid-desktop-#{$i} {
+      grid-template-columns: repeat($i, calc((100% / #{$i}) - #{$gap}));
+      @for $n from 1 through $i {
+        > *:nth-child(#{$i}n + #{$n}) {
+          -ms-grid-column: $n;
+        }
+      }
+      @for $row from 1 through 50 {
+        @for $n from 1 through $i {
+          $v: (($row - 1) * $i) + $n;
+          > *:nth-child(#{$v}) {
+            -ms-grid-row: $row;
+          }
+        }
+      }
+    }
+  }
+}
