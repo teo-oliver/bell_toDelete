@@ -1,10 +1,21 @@
 import React from "react";
+import { withGlobalState } from "react-globally";
 
-const RadioOption = ({ title, imgSrc, option }) => {
-  const handleChange = e => {
-    console.log(e.target.checked);
-    alert("Changed");
-  };
+const RadioOption = ({
+  title,
+  imgSrc,
+  option,
+  handleChange,
+  setGlobalState,
+  globalState
+}) => {
+  // const handleChange = e => {
+  //   const radioOpt = e.target.value;
+  //   console.log(radioOpt);
+  //   setGlobalState(prevGlobalState => ({
+  //     radioBtn: radioOpt
+  //   }));
+  // };
 
   return (
     <div className="RadioOption">
@@ -23,4 +34,4 @@ const RadioOption = ({ title, imgSrc, option }) => {
   );
 };
 
-export default RadioOption;
+export default withGlobalState(RadioOption);

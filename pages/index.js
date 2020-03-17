@@ -3,9 +3,10 @@ import "../styles/styles.scss";
 
 import Button from "../components/Button";
 import FormQuestion from "../components/FormQuestion";
-import SquareCard from "../components/SquareCard";
 import RadioOptions from "../components/RadioOptions";
 import Tiles from "../components/Tiles";
+import CounterControls from "../components/CounterControls";
+import CounterInfo from "../components/CounterInfo";
 
 const Home = () => (
   <div className="container">
@@ -15,6 +16,8 @@ const Home = () => (
     </Head>
 
     <main>
+      <CounterControls />
+      <CounterInfo />
       <Button
         className="btn btn--medium btn--primary--solid"
         onClick={() => {
@@ -27,14 +30,8 @@ const Home = () => (
         Click Me
       </Button>
       <FormQuestion
-        questionsArray={[
-          "Question 1",
-          "Question 2",
-          "Question 3",
-          "Question 4"
-        ]}
+        questionsArray={["Label 1", "Label 2", "Label 3", "Label 4"]}
       />
-      <SquareCard title="House" />
 
       <hr />
 
@@ -43,7 +40,7 @@ const Home = () => (
       <br />
       <hr />
 
-      <Tiles imgSrc="/house-vector-style.svg" />
+      <Tiles title="House" imgSrc="/house-vector-style.svg" />
     </main>
 
     <footer>

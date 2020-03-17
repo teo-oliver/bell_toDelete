@@ -6,19 +6,15 @@
     border: 1px solid $c-primary;
     border-radius: 5px;
     height: 2rem;
+    width: 50%;
     padding-top: 1rem;
-
-    // &:focus + label,
-    // &:not(:placeholder-shown) + label,
-    // &:active + label {
-    //   outline: 0;
-    //   font-size: 0.6rem;
-    // }
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   label {
     position: absolute;
-    left: 2px;
+    left: 5px;
     top: 2px;
     text-transform: uppercase;
     transition: all 0.2s;
